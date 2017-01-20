@@ -1,5 +1,11 @@
 # puppet-curator
 
+[![Puppet Forge](http://img.shields.io/puppetforge/v/mvisonneau/curator.svg)](https://forge.puppetlabs.com/mvisonneau/curator)
+[![Build Status](https://travis-ci.org/mvisonneau/puppet-curator.svg?branch=master)](https://travis-ci.org/mvisonneau/puppet-curator)
+[![Puppet Forge downloads](https://img.shields.io/puppetforge/dt/mvisonneau/curator.svg)](https://forge.puppetlabs.com/mvisonneau/curator)
+[![Puppet Forge score](https://img.shields.io/puppetforge/f/mvisonneau/curator.svg)](https://forge.puppetlabs.com/mvisonneau/curator)
+
+
 This module installs, configures, and manages [curator](https://www.elastic.co/guide/en/elasticsearch/client/curator/index.html), an [elastic](https://www.elastic.co/) product that allows management of an elasticsearch cluster indices.
 
 It has been inspired of the [jlambert121-curator](https://github.com/jlambert121/jlambert121-curator) module but completely redesigned in order to support curator `> 4.x`
