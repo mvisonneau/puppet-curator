@@ -1,3 +1,11 @@
+# == Class: curator::config
+#
+# Automatically called within the curator class
+#
+# Creates the configuration file for the tool
+#
+# === Parameters
+#
 class curator::config (
   Optional[String] $certificate                             = $::curator::certificate,
   String $config_path                                       = $::curator::config_path,

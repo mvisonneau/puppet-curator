@@ -1,4 +1,11 @@
-
+# == Class: curator::install
+#
+# Automatically called within the curator class
+#
+# Handles the installation of the tool.
+#
+# === Parameters
+#
 class curator::install (
   String $ensure             = $::curator::ensure,
   Boolean $manage_repository = $::curator::manage_repository,

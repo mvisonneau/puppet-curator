@@ -1,3 +1,9 @@
+# == Define: curator::job
+#
+# Creates a cronjob that automates the trigger of curator::actions defined resources.
+#
+# === Parameters
+#
 define curator::job (
   String $action,
   String $hour,

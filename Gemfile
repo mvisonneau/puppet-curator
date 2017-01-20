@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+gem 'facter'
+gem 'hiera'
+gem 'puppet-blacksmith'
+gem 'puppet-lint'
+gem 'puppet'
+gem 'puppetlabs_spec_helper'
+gem 'rake'
+gem 'rspec-puppet-facts'
+gem 'rspec-puppet'
+gem 'rspec'

@@ -1,3 +1,9 @@
+# == Define: curator::action
+#
+# Creates a curator action
+#
+# === Parameters
+#
 define curator::action (
   String $config_path  = $::curator::config_path,
   String $config_owner = $::curator::user_name,

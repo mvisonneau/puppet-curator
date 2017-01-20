@@ -1,3 +1,9 @@
+# == Class: curator::repository::apt
+#
+# Private class included if $manage_repository is true and if the os family is debian.
+#
+# === Parameters
+#
 class curator::repository::apt (
   String $version = $::curator::repository::version,
 ) inherits curator::repository {

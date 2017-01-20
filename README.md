@@ -62,7 +62,7 @@ curator::job { 'purge_logstash_over_45_days_everyday':
 
 ```
 
-### Hiera support
+### Builtin Hiera support
 
 You can also directly use hiera in order to manage your resources :
 

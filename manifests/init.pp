@@ -1,4 +1,10 @@
-
+# == Class: curator
+#
+# Main class that needs to be included to your manifests in order to install
+# the tool.
+#
+# === Parameters
+#
 class curator (
   String $ensure                                            = present,
   Hash $actions                                             = {},
