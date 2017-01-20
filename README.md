@@ -87,12 +87,12 @@ curator::actions:
         - filtertype: pattern
           kind: prefix
           value: logstash-
-        - filtertype:  age
-          source:      name
-          direction:   older
-          timestring:  '%Y.%m.%d'
-          unit:        days
-          unit_count:  '45'
+        - filtertype: age
+          source: name
+          direction: older
+          timestring: '%Y.%m.%d'
+          unit: days
+          unit_count: '45'
 
 curator::jobs:
   'purge_logstash_over_45_days_everyday':
