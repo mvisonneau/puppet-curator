@@ -1,0 +1,63 @@
+{
+  "name": "mvisonneau-curator",
+  "version": "1.0.1",
+  "author": "Maxime VISONNEAU",
+  "summary": "Installs, configures, and manages Elasticsearch Curator.",
+  "license": "Apache-2.0",
+  "source": "https://github.com/mvisonneau/puppet-curator",
+  "project_page": "https://github.com/mvisonneau/puppet-curator",
+  "issues_url": "https://github.com/mvisonneau/puppet-curator",
+  "dependencies": [
+    {
+      "name":"puppetlabs/stdlib",
+      "version_requirement":">= 4.13.1 < 5.0.0"
+    },
+    {
+      "name": "puppetlabs/apt",
+      "version_requirement": ">=2.2.0"
+    }
+  ],
+  "data_provider": "hiera",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "10.04",
+        "12.04",
+        "14.04",
+        "16.04"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.5.0 < 5.0.0"
+    }
+  ],
+  "description": "Installs, configures, and manages Elasticsearch Curator."
+}
