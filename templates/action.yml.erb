@@ -1,0 +1,18 @@
+## MANAGED BY PUPPET ##
+actions:
+<% @entities.sort.each do |k,entity| -%>
+  <%= k %>:
+    action: <%= entity['action'] %>
+    description: <%= entity['description'] %>
+    options:
+<% entity['options'].sort.each do |key,option| -%>
+      <%= key %>: '<%= option %>'
+<% end -%>
+    filters:
+<% entity['filters'].each do |filter| -%>
+      - filtertype: <%= filter['filtertype'] %>
+<% filter.select{|x| x != 'filtertype'}.sort.each do |key, element| -%>
+        <%= key %>: '<%= element %>'
+<% end -%>
+<% end -%>
+<% end -%>

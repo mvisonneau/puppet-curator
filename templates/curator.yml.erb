@@ -1,22 +1,22 @@
 ## MANAGED BY PUPPET ##
 client:
   hosts:
-    <% @hosts.sort.each do |host| %>
-      - <%= host %>
-    <% end %>
+<% @hosts.sort.each do |host| -%>
+    - <%= host %>
+<% end -%>
   port: <%= @port %>
   url_prefix: <%= @url_prefix %>
-  use_ssl: <%= @use_ssl %>
+  use_ssl: <%= @use_ssl.to_s.capitalize %>
   certificate: <%= @certificate %>
   client_cert: <%= @client_cert %>
   client_key: <%= @client_key %>
-  ssl_no_validate: <%= @ssl_no_validate %>
+  ssl_no_validate: <%= @ssl_no_validate.to_s.capitalize %>
   http_auth: <%= @http_auth %>
   timeout: <%= @timeout %>
-  master_only: <%= @master_only %>
+  master_only: <%= @master_only.to_s.capitalize %>
 
 logging:
-  loglevel: <%= @loglevel %>
-  logfile: <%= @logfile %>
-  logformat: <%= @logformat %>
-  blacklist: <%= @blacklist %>
+  loglevel: <%= @log_level %>
+  logfile: <%= @log_file %>
+  logformat: <%= @log_format %>
+  blacklist: <%= @log_blacklist %>

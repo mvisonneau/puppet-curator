@@ -7,6 +7,7 @@ class curator::install (
   String $package_provider   = $::curator::package_provider,
   String $user_name          = $::curator::user_name,
   String $user_group         = $::curator::user_group,
+  String $user_home          = $::curator::user_home,
 ) inherits curator {
 
   case $manage_repository {
@@ -41,7 +42,9 @@ class curator::install (
 
   if $manage_user {
     user { $user_name:
-      gid => $user_group,
+      gid        => $user_group,
+      home       => $user_home,
+      managehome => true,
     }
   }
 }
