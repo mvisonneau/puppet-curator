@@ -7,7 +7,6 @@
 #
 class curator (
   String $ensure                                            = present,
-  Hash $actions                                             = {},
   Optional[String] $certificate                             = undef,
   Optional[String] $client_cert                             = undef,
   Optional[String] $client_key                              = undef,
@@ -15,7 +14,6 @@ class curator (
   String $config_file                                       = '/etc/curator/curator.yml',
   Array[String] $hosts                                      = [ '127.0.0.1' ],
   Optional[String] $http_auth                               = undef,
-  Hash $jobs                                                = {},
   Array[String] $log_blacklist                              = [ 'elasticsearch', 'urllib3' ],
   Pattern[/^CRITICAL|ERROR|WARNING|INFO|DEBUG$/] $log_level = 'INFO',
   Optional[String] $log_file                                = undef,
@@ -46,7 +44,4 @@ class curator (
 
   Class['::curator::install'] ->
   Class['::curator::config']
-
-  create_resources( curator::actions, $actions )
-  create_resources( curator::jobs, $jobs )
 }
