@@ -72,29 +72,41 @@ curator::job { 'purge_logstash_over_45_days_everyday':
 
 You can also directly use hiera in order to manage your resources :
 
+- Include those additionnal classes in Puppet
+
+```puppet
+
+include ::curator::actions
+include ::curator::jobs
+
+```
+
+- And then in Hiera :
+
 ```yaml
 
-curator::actions:
+curator::actions::values:
   'purge_logstash_over_45_days':
-    1:
-      action: delete_indices
-      description: Delete indices older than 45 days (based on index name)
-      options:
-        continue_if_exception: 'True'
-        disable_action: 'False'
-        ignore_empty_list: 'True'
-      filters:
-        - filtertype: pattern
-          kind: prefix
-          value: logstash-
-        - filtertype: age
-          source: name
-          direction: older
-          timestring: '%Y.%m.%d'
-          unit: days
-          unit_count: '45'
+    entities:
+      1:
+        action: delete_indices
+        description: Delete indices older than 45 days (based on index name)
+        options:
+          continue_if_exception: 'True'
+          disable_action: 'False'
+          ignore_empty_list: 'True'
+        filters:
+          - filtertype: pattern
+            kind: prefix
+            value: logstash-
+          - filtertype: age
+            source: name
+            direction: older
+            timestring: '%Y.%m.%d'
+            unit: days
+            unit_count: '45'
 
-curator::jobs:
+curator::jobs::values:
   'purge_logstash_over_45_days_everyday':
     action: 'purge_logstash_over_45_days'
     minute: '0'
