@@ -28,7 +28,7 @@ include ::curator
 
 curator::action { 'purge_logstash_over_45_days':
   entities => {
-    1 => {
+    '1' => {
       'action' => 'delete_indices',
       'description' => 'Delete indices older than 45 days (based on index name)',
       'options' => {
