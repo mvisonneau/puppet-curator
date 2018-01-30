@@ -10,7 +10,7 @@ define curator::action (
   String $config_group = $::curator::user_group,
   String $ensure       = present,
   Hash[
-    String,
+    Integer,
     Struct[{
       action      => Enum[
         'alias',
