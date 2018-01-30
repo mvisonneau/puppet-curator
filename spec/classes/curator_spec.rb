@@ -6,7 +6,7 @@ describe 'curator' do
     let :facts do {
       :lsbdistid     => 'Debian',
       :osfamily      => 'Debian',
-      :os            => { :family  => 'Debian' },
+      :os            => { :family => 'Debian', :name => 'stretch' },
       :puppetversion => '4.8.2'
     }
     end
