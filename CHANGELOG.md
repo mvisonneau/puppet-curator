@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [v1.0.5] - 2018-07-13
+### IMPROVEMENTS
+- Support of unquoted booleans within curator config [GH-6]
+
 ## [v1.0.4] - 2018-01-30
 ### IMPROVEMENTS
 - Added CHANGELOG.md
@@ -27,7 +31,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### FEATURES
 - Init
 
-[Unreleased]: https://github.com/mvisonneau/strongbox/compare/v1.0.4...HEAD
+[Unreleased]: https://github.com/mvisonneau/strongbox/compare/v1.0.5...HEAD
+[v1.0.5]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.4...v1.0.5
 [v1.0.4]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.3...v1.0.4
 [v1.0.3]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.2...v1.0.3
 [v1.0.2]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.1...v1.0.2

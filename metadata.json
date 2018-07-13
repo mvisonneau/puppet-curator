@@ -1,6 +1,6 @@
 {
   "name": "mvisonneau-curator",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Maxime VISONNEAU",
   "summary": "Installs, configures, and manages Elasticsearch Curator.",
   "license": "Apache-2.0",
