@@ -26,8 +26,8 @@ define curator::action (
         'snapshot'
       ],
       description => String,
-      options     => Hash[ String, String ],
-      filters     => Array[ Hash[ String, String ] ]
+      options     => Hash[ String, Data],
+      filters     => Array[ Hash[ String, Data ] ]
     }]
   ] $entities = {},
 ) {
