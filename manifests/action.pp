@@ -10,25 +10,39 @@ define curator::action (
   String $config_group = $::curator::user_group,
   String $ensure       = present,
   Hash[
-    Integer,
-    Struct[{
-      action      => Enum[
-        'alias',
-        'allocation',
-        'close',
-        'create_index',
-        'delete_indices',
-        'delete_snapshots',
-        'forcemerge',
-        'open',
-        'replicas',
-        'restore',
-        'snapshot'
-      ],
-      description => String,
-      options     => Hash[ String, Data],
-      filters     => Array[ Hash[ String, Data ] ]
-    }]
+    Variant[Integer,String],
+    Variant[
+      Struct[{
+        action      => Enum[
+          'allocation',
+          'close',
+          'cluster_routing',
+          'create_index',
+          'delete_indices',
+          'delete_snapshots',
+          'forcemerge',
+          'index_settings'
+          'open',
+          'reindex',
+          'replicas',
+          'restore',
+          'rollover'
+          'shrink',
+          'snapshot'
+        ],
+        description => String,
+        options     => Hash[String, Data],
+        filters     => Array[Hash[String, Data]]
+      }],
+      Struct[
+        action      => Enum[
+          'alias',
+        ],
+        description => String,
+        alias       => Hash[String, Data],
+        remove      => Hash[String, Data],
+      ]
+    ],
   ] $entities = {},
 ) {
   require curator
