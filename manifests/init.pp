@@ -8,6 +8,7 @@
 class curator (
   String $ensure                                            = present,
   Optional[String] $certificate                             = undef,
+  String $command                                           = '$(which curator)',
   Optional[String] $client_cert                             = undef,
   Optional[String] $client_key                              = undef,
   String $config_path                                       = '/etc/curator',
