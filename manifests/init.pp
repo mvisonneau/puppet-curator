@@ -16,7 +16,12 @@ class curator (
   Array[String] $hosts                                      = [ '127.0.0.1' ],
   Optional[String] $http_auth                               = undef,
   Array[String] $log_blacklist                              = [ 'elasticsearch', 'urllib3' ],
-  Pattern[/^CRITICAL|ERROR|WARNING|INFO|DEBUG$/] $log_level = 'INFO',
+  Enum[
+      'CRITICAL',
+      'ERROR',
+      'WARNING',
+      'INFO',
+      'DEBUG'] $log_level                                   = 'INFO',
   Optional[String] $log_file                                = undef,
   Optional[String] $log_format                              = 'default',
   Boolean $manage_repository                                = true,
@@ -39,10 +44,10 @@ class curator (
 
   if $manage_repository {
     contain curator::repository
-    Class['::curator::repository'] ->
-    Class['::curator::install']
+    Class['::curator::repository']
+    -> Class['::curator::install']
   }
 
-  Class['::curator::install'] ->
-  Class['::curator::config']
+  Class['::curator::install']
+  -> Class['::curator::config']
 }

@@ -21,12 +21,12 @@ define curator::action (
           'delete_indices',
           'delete_snapshots',
           'forcemerge',
-          'index_settings'
+          'index_settings',
           'open',
           'reindex',
           'replicas',
           'restore',
-          'rollover'
+          'rollover',
           'shrink',
           'snapshot'
         ],
@@ -41,9 +41,9 @@ define curator::action (
         description => String,
         alias       => Hash[String, Data],
         remove      => Hash[String, Data],
-      ]
-    ],
-  ] $entities = {},
+      ],
+    ]
+  ]       $entities = {},
 ) {
   require curator
   require curator::config
