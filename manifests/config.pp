@@ -15,7 +15,12 @@ class curator::config (
   Array[String] $hosts                                      = $::curator::hosts,
   Optional[String] $http_auth                               = $::curator::http_auth,
   Array[String] $log_blacklist                              = $::curator::log_blacklist,
-  Pattern[/^CRITICAL|ERROR|WARNING|INFO|DEBUG$/] $log_level = $::curator::log_level,
+  Enum[
+      'CRITICAL',
+      'ERROR',
+      'WARNING',
+      'INFO',
+      'DEBUG'] $log_level                                   = $::curator::log_level,
   Optional[String] $log_file                                = $::curator::log_file,
   Optional[String] $log_format                              = $::curator::log_format,
   Boolean $master_only                                      = $::curator::master_only,
@@ -33,15 +38,15 @@ class curator::config (
 
   file { [ $config_path, "${::curator::user_home}/.curator" ]:
     ensure => directory,
-  } ->
+  }
 
-  file { $config_file:
+  -> file { $config_file:
     ensure  => present,
     mode    => '0660',
     content => template( "${module_name}/curator.yml.erb" ),
-  } ->
+  }
 
-  file { "${::curator::user_home}/.curator/curator.yml":
+  -> file { "${::curator::user_home}/.curator/curator.yml":
     ensure => link,
     target => $config_file,
   }
