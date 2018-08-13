@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [v1.0.6] - 2018-08-13
 ### ENHANCEMENTS
 - Added the possibility to configure the path of the curator command [GH-5]
 - Lint improvements
@@ -14,8 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### BUGFIXES
 - Updated parameter types on jobs in order to support more configs [GH-8]
-- Fixed support for alias and added support for cluster_routing, index_settings, reindex, rollover and shrink actions
-
+- Fixed support for alias and added support for cluster_routing, index_settings, reindex, rollover and shrink actions [GH-7]
 
 ## [v1.0.5] - 2018-07-13
 ### IMPROVEMENTS
@@ -41,7 +41,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### FEATURES
 - Init
 
-[Unreleased]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.5...HEAD
+[Unreleased]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.6...HEAD
+[v1.0.5]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.5...v1.0.6
 [v1.0.5]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.4...v1.0.5
 [v1.0.4]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.3...v1.0.4
 [v1.0.3]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.2...v1.0.3
