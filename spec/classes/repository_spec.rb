@@ -1,9 +1,7 @@
 require 'spec_helper'
 
 describe 'curator::repository', :type => :class do
-
   on_supported_os().each do |os, os_facts|
-
     context "on #{os}" do
       let(:facts) { os_facts }
 
@@ -27,8 +25,6 @@ describe 'curator::repository', :type => :class do
         it { is_expected.not_to contain_class( 'curator::repository::yum' ) }
         it { is_expected.to     contain_class( 'curator::repository::apt' ) }
       end
-
-
     end
   end
 end

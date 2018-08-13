@@ -27,11 +27,7 @@ RSpec.configure do |c|
     c.ordering = :manifest
 
     c.hiera_config = hiera_config
-
 end
-
-
-
 
 # Use context by doing include_context "name"
 # This will load hiera files located in tests/hieradata

@@ -24,7 +24,7 @@ describe 'hiera_host.example.com', :type => :host do
       it { is_expected.to contain_file('/etc/curator/curator.yml') }
       it { is_expected.to contain_file('/home/curator/.curator/curator.yml') }
 
-      it { is_expected.to contain_class( 'curator::actions' )}
+      it { is_expected.to contain_class( 'curator::actions' ) }
       it { is_expected.to contain_class('curator::jobs' ) }
 
       it { is_expected.to contain_curator__action('hiera_action_1') }

@@ -43,7 +43,7 @@ define curator::action (
         remove      => Hash[String, Data],
       ],
     ]
-  ]       $entities = {},
+  ] $entities          = {},
 ) {
   require curator
   require curator::config

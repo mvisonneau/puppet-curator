@@ -1,11 +1,10 @@
 require 'spec_helper'
 
 describe 'curator::install', :type => :class do
-
   on_supported_os().each do |os, os_facts|
-
     context "on #{os}" do
       let(:facts) { os_facts }
+
       it { is_expected.to compile.with_all_deps }
       it { is_expected.to contain_class( 'curator' ) }
       it { is_expected.to contain_class( 'curator::install' ) }
@@ -13,7 +12,7 @@ describe 'curator::install', :type => :class do
       it { is_expected.to contain_class( 'curator::repository' ) }
 
       it { is_expected.to contain_user('curator') }
-      it { is_expected.to contain_package('python-elasticsearch-curator')}
+      it { is_expected.to contain_package('python-elasticsearch-curator') }
 
       if os_facts[:osfamily] == 'RedHat'
         it { is_expected.to     contain_class( 'curator::repository::yum' ) }
@@ -24,11 +23,9 @@ describe 'curator::install', :type => :class do
         it { is_expected.not_to contain_class( 'curator::repository::yum' ) }
         it { is_expected.to     contain_class( 'curator::repository::apt' ) }
       end
-
-
     end
 
-### 
+###
 #    context "with manage_repository=false on #{os}" do
 #      let(:facts) { os_facts }
 #      include_context 'print_catalogue'
@@ -49,7 +46,6 @@ describe 'curator::install', :type => :class do
 #
 #      it { is_expected.to contain_user('curator') }
 #      it { is_expected.to contain_package('python-elasticsearch-curator')}
-#
 #    end
 
   end

@@ -25,8 +25,6 @@ describe 'curator', :type => :class do
         it { is_expected.not_to contain_class( 'curator::repository::yum' ) }
         it { is_expected.to     contain_class( 'curator::repository::apt' ) }
       end
-
-
     end
 
     context "with manage_repository=false on #{os}" do
@@ -46,7 +44,7 @@ describe 'curator', :type => :class do
       it { is_expected.not_to contain_class( 'curator::repository::yum' ) }
 
       it { is_expected.to contain_user('curator') }
-      it { is_expected.to contain_package('elasticsearch-curator')}
+      it { is_expected.to contain_package('elasticsearch-curator') }
 
     end
 

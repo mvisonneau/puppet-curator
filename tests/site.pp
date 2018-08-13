@@ -41,7 +41,6 @@ node 'param_host.example.com' {
     minute => 0,
     hour   => 0,
   }
-
 }
 
 node default {}
