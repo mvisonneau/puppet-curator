@@ -62,8 +62,8 @@ curator::action { 'purge_logstash_over_45_days':
 
 curator::job { 'purge_logstash_over_45_days_everyday':
   action => 'purge_logstash_over_45_days',
-  minute => '0',
-  hour   => '0',
+  minute => 0,
+  hour   => 2,
 }
 
 ```
@@ -109,8 +109,8 @@ curator::actions::values:
 curator::jobs::values:
   'purge_logstash_over_45_days_everyday':
     action: 'purge_logstash_over_45_days'
-    minute: '0'
-    hour: '0'
+    minute: 0
+    hour: 2
 
 ```
 
