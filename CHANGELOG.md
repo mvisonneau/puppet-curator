@@ -42,7 +42,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Init
 
 [Unreleased]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.6...HEAD
-[v1.0.5]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.5...v1.0.6
+[v1.0.6]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.5...v1.0.6
 [v1.0.5]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.4...v1.0.5
 [v1.0.4]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.3...v1.0.4
 [v1.0.3]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.2...v1.0.3
