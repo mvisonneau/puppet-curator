@@ -14,7 +14,7 @@ describe 'curator', :type => :class do
       it { is_expected.to contain_class( 'curator::repository' ) }
 
       it { is_expected.to contain_user('curator') }
-      it { is_expected.to contain_package('python-elasticsearch-curator')}
+      it { is_expected.to contain_package('elasticsearch-curator')}
 
       if os_facts[:osfamily] == 'RedHat'
         it { is_expected.to     contain_class( 'curator::repository::yum' ) }
@@ -33,7 +33,6 @@ describe 'curator', :type => :class do
         :manage_repository => false,
       }
       end
-
       it { is_expected.to compile.with_all_deps }
       it { is_expected.to contain_class( 'curator' ) }
       it { is_expected.to contain_class( 'curator::install' ) }
