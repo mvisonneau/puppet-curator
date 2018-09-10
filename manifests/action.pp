@@ -34,14 +34,14 @@ define curator::action (
         options     => Hash[String, Data],
         filters     => Array[Hash[String, Data]]
       }],
-      Struct[
+      Struct[{
         action      => Enum[
           'alias',
         ],
         description => String,
         alias       => Hash[String, Data],
         remove      => Hash[String, Data],
-      ],
+      }],
     ]
   ] $entities          = {},
 ) {

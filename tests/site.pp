@@ -10,14 +10,14 @@ node 'param_host.example.com' {
   curator::action { 'param_action_1':
     entities => {
       'action_1' => {
-        'action' => 'delete_indices',
+        'action'      => 'delete_indices',
         'description' => 'Delete indices older than 45 days (based on index name)',
-        'options' => {
+        'options'     => {
           'continue_if_exception' => 'True',
           'disable_action'        => 'False',
           'ignore_empty_list'     => 'True',
         },
-        'filters' => [
+        'filters'     => [
           {
             'filtertype' => 'pattern',
             'kind'       => 'prefix',
