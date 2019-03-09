@@ -5,6 +5,7 @@
 # === Parameters
 #
 class curator::repository::apt (
+  String $debian_major_version = $::os['release']['major'],
   String $version = $::curator::repository::version,
 ) inherits curator::repository {
 
@@ -12,8 +13,13 @@ class curator::repository::apt (
     class { '::apt': }
   }
 
+  $repo_suffix = $debian_major_version ? {
+    '8' => '',
+    '9' => '9',
+  }
+
   apt::source { 'curator':
-    location => "http://packages.elastic.co/curator/${version}/debian",
+    location => "http://packages.elastic.co/curator/${version}/debian${repo_suffix}",
     release  => 'stable',
     repos    => 'main',
     key      => {
