@@ -14,8 +14,15 @@ class curator::repository::apt (
   }
 
   $repo_suffix = $debian_major_version ? {
-    '8' => '',
-    '9' => '9',
+    # Debian releases
+    '8'     => '',
+    '9'     => '9',
+
+    # Ubuntu releases
+    '12.04' => '',
+    '14.04' => '',
+    '16.04' => '',
+    '18.04' => '',
   }
 
   apt::source { 'curator':
