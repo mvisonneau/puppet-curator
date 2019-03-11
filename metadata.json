@@ -55,7 +55,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.3.0 < 5.0.0"
+      "version_requirement": ">= 4.3.0 < 7.0.0"
     }
   ],
   "description": "Installs, configures, and manages Elasticsearch Curator."
