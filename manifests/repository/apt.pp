@@ -23,6 +23,8 @@ class curator::repository::apt (
     '14.04' => '',
     '16.04' => '',
     '18.04' => '',
+
+    default => fail('Unsupported major operating system version'),
   }
 
   apt::source { 'curator':
