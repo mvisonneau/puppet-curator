@@ -120,9 +120,9 @@ This module has been built on and tested against Puppet 4.3 and higher.
 
 The module has been tested on:
 
-- Debian 7/8
+- Debian 7/8/9
 - CentOS 6/7
-- Ubuntu 14.04, 16.04
+- Ubuntu 14.04, 16.04, 18.04
 
 Testing on other platforms has been light and cannot be guaranteed.
 

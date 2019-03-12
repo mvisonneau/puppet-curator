@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [v1.0.7] - 2019-03-12
+### FEATURES
+- Added support for Debian Stretch [GH-17]
+
+### BUGFIXES
+- Fixed Travis CI pipeline [GH-17]
+
 ## [v1.0.6] - 2018-08-13
 ### ENHANCEMENTS
 - Added the possibility to configure the path of the curator command [GH-5]
@@ -18,11 +25,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed support for alias and added support for cluster_routing, index_settings, reindex, rollover and shrink actions [GH-7]
 
 ## [v1.0.5] - 2018-07-13
-### IMPROVEMENTS
+### ENHANCEMENTS
 - Support of unquoted booleans within curator config [GH-6]
 
 ## [v1.0.4] - 2018-01-30
-### IMPROVEMENTS
+### ENHANCEMENTS
 - Added CHANGELOG.md
 - Reverted String to Integer as Hash keys for the config
 
@@ -34,14 +41,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Update action.pp [GH-1]
 
 ## [v1.0.2] - 2017-01-24
-### IMPROVEMENTS
+### ENHANCEMENTS
 - Updated actions and jobs definitions
 
 ## [v1.0.1] - 2017-01-20
 ### FEATURES
 - Init
 
-[Unreleased]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.6...HEAD
+[Unreleased]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.7...HEAD
+[v1.0.7]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.6...v1.0.7
 [v1.0.6]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.5...v1.0.6
 [v1.0.5]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.4...v1.0.5
 [v1.0.4]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.3...v1.0.4
