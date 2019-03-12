@@ -38,25 +38,24 @@
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
-        "6",
-        "7",
-        "8"
+        "8",
+        "9"
       ]
     },
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
-        "10.04",
         "12.04",
         "14.04",
-        "16.04"
+        "16.04",
+        "18.04"
       ]
     }
   ],
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.3.0 < 5.0.0"
+      "version_requirement": ">= 4.3.0 < 7.0.0"
     }
   ],
   "description": "Installs, configures, and manages Elasticsearch Curator."
