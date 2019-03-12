@@ -14,8 +14,15 @@ class curator::repository::apt (
   }
 
   $repo_suffix = $debian_major_version ? {
-    '9'     => '9', # Debian 9 ships with OpenSSL 1.1.0
-    default => '',
+    # Debian releases
+    '8'     => '',
+    '9'     => '9',
+
+    # Ubuntu releases
+    '12.04' => '',
+    '14.04' => '',
+    '16.04' => '',
+    '18.04' => '',
   }
 
   apt::source { 'curator':
