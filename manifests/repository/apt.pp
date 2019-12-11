@@ -17,6 +17,7 @@ class curator::repository::apt (
     # Debian releases
     '8'     => '',
     '9'     => '9',
+    '10'    => '9',
 
     # Ubuntu releases
     '12.04' => '',
