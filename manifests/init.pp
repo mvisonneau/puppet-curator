@@ -7,9 +7,12 @@
 #
 class curator (
   String $ensure                 = $::curator::params::ensure,
+  String $action_mode            = $::curator::params::action_mode,
   String $command                = $::curator::params::command,
   String $config_path            = $::curator::params::config_path,
+  String $config_path_mode       = $::curator::params::config_path_mode,
   String $config_file            = $::curator::params::config_file,
+  String $config_file_mode       = $::curator::params::config_file_mode,
   Array[String] $hosts           = $::curator::params::hosts,
   Array[String] $log_blacklist   = $::curator::params::log_blacklist,
   Enum[

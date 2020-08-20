@@ -5,6 +5,7 @@
 # === Parameters
 #
 define curator::action (
+  String $action_mode  = $::curator::action_mode,
   String $config_path  = $::curator::config_path,
   String $config_owner = $::curator::user_name,
   String $config_group = $::curator::user_group,
@@ -52,7 +53,7 @@ define curator::action (
     ensure  => $ensure,
     owner   => $config_owner,
     group   => $config_group,
-    mode    => '0644',
+    mode    => $action_mode,
     content => template( "${module_name}/action.yml.erb" ),
   }
 }
