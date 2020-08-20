@@ -3,12 +3,15 @@
 # This class is meant to be called from curator
 # It sets variables according to platform
 class curator::params{
+  $action_mode          = '0644'
   $certificate          = undef
   $client_cert          = undef
   $client_key           = undef
   $command              = '$(which curator)'
   $config_file          = '/etc/curator/curator.yml'
+  $config_file_mode     = '0660'
   $config_path          = '/etc/curator'
+  $config_path_mode     = '0755'
   $ensure               = 'present'
   $hosts                = [ '127.0.0.1' ]
   $http_auth            = undef

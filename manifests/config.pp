@@ -9,7 +9,9 @@
 class curator::config (
   Optional[String] $certificate = $::curator::certificate,
   String $config_path           = $::curator::config_path,
+  String $config_path_mode      = $::curator::params::config_path_mode,
   String $config_file           = $::curator::config_file,
+  String $config_file_mode      = $::curator::config_file_mode,
   Optional[String] $client_cert = $::curator::client_cert,
   Optional[String] $client_key  = $::curator::client_key,
   Array[String] $hosts          = $::curator::hosts,
@@ -33,16 +35,16 @@ class curator::config (
   File {
     owner  => $::curator::user_name,
     group  => $::curator::user_group,
-    mode   => '0644',
   }
 
   file { [ $config_path, "${::curator::user_home}/.curator" ]:
     ensure => directory,
+    mode   => $config_path_mode,
   }
 
   -> file { $config_file:
     ensure  => present,
-    mode    => '0660',
+    mode    => $config_file_mode,
     content => template( "${module_name}/curator.yml.erb" ),
   }
 
