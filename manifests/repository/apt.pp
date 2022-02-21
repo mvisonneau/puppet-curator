@@ -18,6 +18,7 @@ class curator::repository::apt (
     '8'     => '',
     '9'     => '9',
     '10'    => '9',
+    '11'    => '9',
 
     # Ubuntu releases
     '12.04' => '',
