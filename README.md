@@ -1,14 +1,13 @@
 # puppet-curator
 
 [![Puppet Forge](http://img.shields.io/puppetforge/v/mvisonneau/curator.svg)](https://forge.puppetlabs.com/mvisonneau/curator)
-[![Build Status](https://travis-ci.org/mvisonneau/puppet-curator.svg?branch=master)](https://travis-ci.org/mvisonneau/puppet-curator)
 [![Puppet Forge downloads](https://img.shields.io/puppetforge/dt/mvisonneau/curator.svg)](https://forge.puppetlabs.com/mvisonneau/curator)
 [![Puppet Forge score](https://img.shields.io/puppetforge/f/mvisonneau/curator.svg)](https://forge.puppetlabs.com/mvisonneau/curator)
-
+[![test](https://github.com/mvisonneau/puppet-curator/actions/workflows/test.yml/badge.svg)](https://github.com/mvisonneau/puppet-curator/actions/workflows/test.yml)
 
 This module installs, configures, and manages [curator](https://www.elastic.co/guide/en/elasticsearch/client/curator/index.html), an [elastic](https://www.elastic.co/) product that allows management of an elasticsearch cluster indices.
 
-It has been inspired of the [jlambert121-curator](https://github.com/jlambert121/jlambert121-curator) module but completely redesigned in order to support curator `> 4.x`
+It has been inspired of the [jlambert121-curator](https://github.com/jlambert121/jlambert121-curator) module but designed to support curator `> 4.x`
 
 ## Usage
 
@@ -116,13 +115,13 @@ curator::jobs::values:
 
 ## Limitations
 
-This module has been built on and tested against Puppet 4.3 and higher.
+This module has been built on and tested from Puppet `4.3` up to `7.14`.
 
 The module has been tested on:
 
-- Debian 7/8/9
-- CentOS 6/7
-- Ubuntu 14.04, 16.04, 18.04
+- Debian 7 -> 11
+- RHEL/CentOS 6/7
+- Ubuntu 14 -> 20
 
 Testing on other platforms has been light and cannot be guaranteed.
 

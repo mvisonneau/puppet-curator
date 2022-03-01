@@ -21,7 +21,7 @@ describe 'param_host.example.com', :type => :host do
       it { is_expected.to contain_curator__action('param_action_1') }
       it { is_expected.to contain_curator__job('param_job_1') }
       it { is_expected.to contain_file('/etc/curator/action_param_action_1.yml') }
-      it { is_expected.to contain_cron('curator_param_job_1') }
+      it { is_expected.to contain_cron__job('curator_param_job_1') }
     end
   end
 end

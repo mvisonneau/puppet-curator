@@ -15,19 +15,14 @@ task :spec_prep do
 
    site='./spec/fixtures/manifests/site.pp'
    File.delete(site) if File.exist?(site)
-   symlink('../../../tests/site.pp', site , options )
+   symlink('../../../examples/site.pp', site , options )
 
    File.delete('./spec/fixtures/hiera.yaml') if File.symlink?('./spec/fixtures/hiera.yaml')
-   symlink('../../tests/hiera.yaml', './spec/fixtures/hiera.yaml', options )
+   symlink('../../examples/hiera.yaml', './spec/fixtures/hiera.yaml', options )
 
    File.delete('./spec/fixtures/hieradata') if File.symlink?('./spec/fixtures/hieradata')
-   symlink('../../tests/hieradata/', './spec/fixtures/hieradata', options )
-
+   symlink('../../examples/hieradata/', './spec/fixtures/hieradata', options )
 end
-
-
-
-
 
 #########################################################################
 # Define rake runs collection of tasks

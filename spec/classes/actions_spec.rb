@@ -6,8 +6,8 @@ describe 'curator::actions', :type => :class do
       let(:facts) { os_facts }
 
       it { is_expected.to compile.with_all_deps }
-      it { is_expected.to  contain_class( 'curator::install' ) }
-      it { is_expected.to  contain_class( 'curator::config' ) }
+      it { is_expected.to contain_class( 'curator::install' ) }
+      it { is_expected.to contain_class( 'curator::config' ) }
     end
   end
 end

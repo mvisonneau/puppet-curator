@@ -1,23 +1,36 @@
 {
   "name": "mvisonneau-curator",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "Maxime VISONNEAU",
   "summary": "Installs, configures, and manages Elasticsearch Curator.",
   "license": "Apache-2.0",
   "source": "https://github.com/mvisonneau/puppet-curator",
   "project_page": "https://github.com/mvisonneau/puppet-curator",
   "issues_url": "https://github.com/mvisonneau/puppet-curator",
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.3.0 < 8.0.0"
+    }
+  ],
   "dependencies": [
     {
       "name":"puppetlabs/stdlib",
-      "version_requirement":">= 4.13.1 < 5.0.0"
+      "version_requirement":">=  8.1.0 < 9.0.0"
     },
     {
       "name": "puppetlabs/apt",
-      "version_requirement": ">=2.2.0"
+      "version_requirement": ">= 8.3.0 < 9.0.0"
+    },
+    {
+      "name": "puppet/cron",
+      "version_requirement": ">= 3.0.0 < 4.0.0"
+    },
+    {
+      "name": "puppetlabs/yumrepo_core",
+      "version_requirement": ">= 1.1.0 < 2.0.0"
     }
   ],
-  "data_provider": "hiera",
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
@@ -39,7 +52,9 @@
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
         "8",
-        "9"
+        "9",
+        "10",
+        "11"
       ]
     },
     {
@@ -48,15 +63,9 @@
         "12.04",
         "14.04",
         "16.04",
-        "18.04"
+        "18.04",
+        "20.04"
       ]
     }
-  ],
-  "requirements": [
-    {
-      "name": "puppet",
-      "version_requirement": ">= 4.3.0 < 7.0.0"
-    }
-  ],
-  "description": "Installs, configures, and manages Elasticsearch Curator."
+  ]
 }
