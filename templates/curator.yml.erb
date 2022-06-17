@@ -11,7 +11,9 @@ client:
   client_cert: <%= @client_cert %>
   client_key: <%= @client_key %>
   ssl_no_validate: <%= @ssl_no_validate.to_s.capitalize %>
-  http_auth: <%= @http_auth %>
+<% @ssl_auth.each do |option_line| -%>
+  <%= option_line %>
+<% end -%>
   timeout: <%= @timeout %>
   master_only: <%= @master_only.to_s.capitalize %>
 

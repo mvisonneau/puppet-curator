@@ -13,9 +13,11 @@ class curator::params{
   $config_path        = '/etc/curator'
   $config_path_mode   = '0755'
   $ensure             = 'present'
-  $hosts              = [ '127.0.0.1' ]
+  $hosts              = ['127.0.0.1']
   $http_auth          = undef
-  $log_blacklist      = [ 'elasticsearch', 'urllib3' ]
+  $username           = undef
+  $password           = undef
+  $log_blacklist      = ['elasticsearch','urllib3']
   $log_file           = undef
   $log_format         = 'default'
   $log_level          = 'INFO'

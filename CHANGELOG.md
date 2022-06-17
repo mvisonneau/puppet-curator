@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [v1.0.9]
+### CHANGED
+
+- Added username/password : [http_auth is deprecated](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/configfile.html#http_auth)
+
 ## [v1.0.8] - 2022-03-01
 ### CHANGED
 
