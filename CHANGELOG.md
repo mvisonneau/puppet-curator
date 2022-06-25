@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+- Issue [Unable to pass set mapping on create action](https://github.com/mvisonneau/puppet-curator/issues/19)
+    - Added function hash2curatoractionfile
+    - Removed template action.yml.erb
+    - Added action freeze, unfreeze (and filters to Optional[Array[Hash[String, Data]]])
+    - Modified action alias
+
 ## [v1.0.8] - 2022-03-01
 ### CHANGED
 
