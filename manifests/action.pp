@@ -22,6 +22,7 @@ define curator::action (
           'delete_indices',
           'delete_snapshots',
           'forcemerge',
+          'freeze',
           'index_settings',
           'open',
           'reindex',
@@ -29,18 +30,21 @@ define curator::action (
           'restore',
           'rollover',
           'shrink',
-          'snapshot'
+          'snapshot',
+          'unfreeze'
         ],
         description => String,
         options     => Hash[String, Data],
-        filters     => Array[Hash[String, Data]]
+        filters     => Optional[Array[Hash[String, Data]]]
       }],
       Struct[{
         action      => Enum[
           'alias',
         ],
         description => String,
-        alias       => Hash[String, Data],
+        alias       => Optional[Hash[String, Data]],
+        options     => Optional[Hash[String, Data]],
+        add         => Optional[Hash[String, Data]],
         remove      => Hash[String, Data],
       }],
     ]
@@ -54,6 +58,6 @@ define curator::action (
     owner   => $config_owner,
     group   => $config_group,
     mode    => $action_mode,
-    content => template( "${module_name}/action.yml.erb" ),
+    content => hash2curatoractionfile({'actions' => $entities}),
   }
 }

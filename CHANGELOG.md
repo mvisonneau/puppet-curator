@@ -7,10 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [v1.0.9]
 ### CHANGED
 
 - Added username/password : [http_auth is deprecated](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/configfile.html#http_auth)
+- Issue [Unable to pass set mapping on create action](https://github.com/mvisonneau/puppet-curator/issues/19)
+    - Added function hash2curatoractionfile
+    - Removed template action.yml.erb
+    - Added action freeze, unfreeze (and filters to Optional[Array[Hash[String, Data]]])
+    - Modified action alias
 
 ## [v1.0.8] - 2022-03-01
 ### CHANGED
