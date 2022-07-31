@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [v1.0.9] - 2022-07-31
 ### CHANGED
 
 - Added username/password : [http_auth is deprecated](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/configfile.html#http_auth)
@@ -76,7 +77,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Init
 
-[Unreleased]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.8...HEAD
+[Unreleased]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.9...HEAD
+[v1.0.9]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.8...v1.0.9
 [v1.0.8]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.7...v1.0.8
 [v1.0.7]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.6...v1.0.7
 [v1.0.6]: https://github.com/mvisonneau/puppet-curator/compare/v1.0.5...v1.0.6
