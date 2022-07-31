@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### CHANGED
+
+- Added username/password : [http_auth is deprecated](https://www.elastic.co/guide/en/elasticsearch/client/curator/current/configfile.html#http_auth)
 - Issue [Unable to pass set mapping on create action](https://github.com/mvisonneau/puppet-curator/issues/19)
     - Added function hash2curatoractionfile
     - Removed template action.yml.erb

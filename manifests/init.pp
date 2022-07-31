@@ -35,6 +35,8 @@ class curator (
   String $user_home              = $::curator::params::user_home,
 
   Optional[String] $http_auth    = $::curator::params::http_auth,
+  Optional[String] $username     = $::curator::params::username,
+  Optional[String] $password     = $::curator::params::password,
   Optional[String] $log_file     = $::curator::params::log_file,
   Optional[String] $log_format   = $::curator::params::log_format,
   Optional[String] $package_name = $::curator::params::package_name,
@@ -43,7 +45,6 @@ class curator (
   Optional[String] $client_cert  = $::curator::params::client_cert,
   Optional[String] $client_key   = $::curator::params::client_key,
 ) inherits curator::params {
-
   contain curator::install
   contain curator::config
 

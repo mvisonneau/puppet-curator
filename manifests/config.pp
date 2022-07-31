@@ -16,6 +16,8 @@ class curator::config (
   Optional[String] $client_key  = $::curator::client_key,
   Array[String] $hosts          = $::curator::hosts,
   Optional[String] $http_auth   = $::curator::http_auth,
+  Optional[String] $username    = $::curator::username,
+  Optional[String] $password    = $::curator::password,
   Array[String] $log_blacklist  = $::curator::log_blacklist,
   Enum[
       'CRITICAL',
@@ -37,7 +39,12 @@ class curator::config (
     group  => $::curator::user_group,
   }
 
-  file { [ $config_path, "${::curator::user_home}/.curator" ]:
+  if $http_auth { $_http_auth_line = "http_auth: ${http_auth}" }
+  if $username { $_username_line = "username: ${username}" }
+  if $password { $_password_line = "password: ${password}" }
+  $ssl_auth = delete_undef_values([$_http_auth_line,$_username_line,$_password_line])
+
+  file { [$config_path,"${::curator::user_home}/.curator"]:
     ensure => directory,
     mode   => $config_path_mode,
   }
